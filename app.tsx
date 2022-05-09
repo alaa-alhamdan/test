@@ -1,7 +1,6 @@
 import * as React  from 'react';
 import * as ReactDOM from 'react-dom';
 import * as ReactRouterDOM from  'react-router-dom' ;
-import axios from 'axios';
 
 import ChartsEmbedSDK from "@mongodb-js/charts-embed-dom";
 import { Map, GoogleApiWrapper  } from 'google-maps-react';
@@ -1063,8 +1062,4 @@ class App extends React.Component {
   
   ReactDOM.render(< App />, document.getElementById('app'));
 
-
-export default GoogleApiWrapper({
-      apiKey: 'AIzaSyC1QAymcINjIAuP8b-p1TIWd9xJwzh77oY'
-    })( MapContainer );
 
