@@ -1037,7 +1037,7 @@ class App extends React.Component {
             
           </ul>
          <div>
-             <Routes>
+             <Routes basename='/index.html'>
                  <Route path="/Buses" element ={ < Buses /> }/>
                  <Route path="/Cars" element ={< Cars />}/> 
                  <Route path="/registration" element ={ < Registration /> }/>
