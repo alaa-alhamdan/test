@@ -1,9 +1,10 @@
 {
   "name": "react",
   "version": "1.0.0",
+  "homepage": ".",
   "description": "",
   "main": "index.js",
-  "homepage": ".",
+  
   "scripts": {
     "dev": "parcel index.html"
   },
