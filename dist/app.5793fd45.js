@@ -100482,7 +100482,28 @@ module.exports = "/onemap.d4a0fbfc.jpg";
 },{}],"app.tsx":[function(require,module,exports) {
 "use strict";
 
-var __extends = this && this.__extends || function () {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.MapContainer = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var ReactDOM = _interopRequireWildcard(require("react-dom"));
+
+var ReactRouterDOM = _interopRequireWildcard(require("react-router-dom"));
+
+var _chartsEmbedDom = _interopRequireDefault(require("@mongodb-js/charts-embed-dom"));
+
+var _googleMapReact = _interopRequireDefault(require("google-map-react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var __extends = void 0 && (void 0).__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
     _extendStatics = Object.setPrototypeOf || {
       __proto__: []
@@ -100510,47 +100531,7 @@ var __extends = this && this.__extends || function () {
   };
 }();
 
-var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
-  if (k2 === undefined) k2 = k;
-  var desc = Object.getOwnPropertyDescriptor(m, k);
-
-  if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-    desc = {
-      enumerable: true,
-      get: function get() {
-        return m[k];
-      }
-    };
-  }
-
-  Object.defineProperty(o, k2, desc);
-} : function (o, m, k, k2) {
-  if (k2 === undefined) k2 = k;
-  o[k2] = m[k];
-});
-
-var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
-  Object.defineProperty(o, "default", {
-    enumerable: true,
-    value: v
-  });
-} : function (o, v) {
-  o["default"] = v;
-});
-
-var __importStar = this && this.__importStar || function (mod) {
-  if (mod && mod.__esModule) return mod;
-  var result = {};
-  if (mod != null) for (var k in mod) {
-    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-  }
-
-  __setModuleDefault(result, mod);
-
-  return result;
-};
-
-var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
+var __awaiter = void 0 && (void 0).__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
       resolve(value);
@@ -100582,7 +100563,7 @@ var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, gene
   });
 };
 
-var __generator = this && this.__generator || function (thisArg, body) {
+var __generator = void 0 && (void 0).__generator || function (thisArg, body) {
   var _ = {
     label: 0,
     sent: function sent() {
@@ -100693,30 +100674,9 @@ var __generator = this && this.__generator || function (thisArg, body) {
   }
 };
 
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.MapContainer = void 0;
-
-var React = __importStar(require("react"));
-
-var ReactDOM = __importStar(require("react-dom"));
-
-var ReactRouterDOM = __importStar(require("react-router-dom"));
-
-var charts_embed_dom_1 = __importDefault(require("@mongodb-js/charts-embed-dom"));
-
-var google_map_react_1 = __importDefault(require("google-map-react"));
-
 var AnyReactComponent = function AnyReactComponent(_a) {
   var text = _a.text;
-  return /*#__PURE__*/React.createElement("div", null, text);
+  return React.createElement("div", null, text);
 };
 
 var API_KEY = 'AIzaSyC1QAymcINjIAuP8b-p1TIWd9xJwzh77oY';
@@ -100732,7 +100692,7 @@ var map2 = require('./onemap.jpg');
 var useState = React.useState,
     useEffect = React.useEffect,
     useRef = React.useRef;
-var sdk = new charts_embed_dom_1.default({
+var sdk = new _chartsEmbedDom.default({
   baseUrl: "https://charts.mongodb.com/charts-project-0-seudn"
 }); // for buses : chart 1 and 3 
 
@@ -100776,18 +100736,18 @@ function (_super) {
       color: "#78281F",
       backgroundColor: "#FCF3CF"
     };
-    return /*#__PURE__*/React.createElement("div", {
+    return React.createElement("div", {
       style: page
-    }, /*#__PURE__*/React.createElement("h1", null, " Transport System Management "), /*#__PURE__*/React.createElement("p", null, "Welcome to Transport System Management, we aim to help the end users to book a ticket or see the suggestion bar.  "), /*#__PURE__*/React.createElement(HashRouter, null, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", null, " Here you can select the transport method: "), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, React.createElement("h1", null, " Transport System Management "), React.createElement("p", null, "Welcome to Transport System Management, we aim to help the end users to book a ticket or see the suggestion bar.  "), React.createElement(HashRouter, null, React.createElement("div", null, React.createElement("p", null, " Here you can select the transport method: "), React.createElement("ul", null, React.createElement("li", null, React.createElement(Link, {
       to: "/Buses"
-    }, "Buses")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, "Buses")), React.createElement("li", null, React.createElement(Link, {
       to: "/Cars"
-    }, "Cars"))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Routes, null, /*#__PURE__*/React.createElement(Route, {
+    }, "Cars"))), React.createElement("div", null, React.createElement(Routes, null, React.createElement(Route, {
       path: "/Buses",
-      element: /*#__PURE__*/React.createElement(Buses, null)
-    }), /*#__PURE__*/React.createElement(Route, {
+      element: React.createElement(Buses, null)
+    }), React.createElement(Route, {
       path: "/Cars",
-      element: /*#__PURE__*/React.createElement(Cars, null)
+      element: React.createElement(Cars, null)
     }))))));
   };
 
@@ -100831,46 +100791,46 @@ function (_super) {
   };
 
   Buses.prototype.render = function () {
-    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("head", null, "  ", /*#__PURE__*/React.createElement("title", null, "Buses ")), /*#__PURE__*/React.createElement("body", null, /*#__PURE__*/React.createElement("h1", null, "Buses Services   "), /*#__PURE__*/React.createElement("p", null, " There are 4 paths that you can reach Alharam: "), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, " From Um Al Qura to Ajyad Station. Path 6  "), /*#__PURE__*/React.createElement("li", null, " From Alhajj Street to AlMarwa Station. Path 10 "), /*#__PURE__*/React.createElement("li", null, " From Anwariya to Kaaba Station. Path2 "), /*#__PURE__*/React.createElement("li", null, " From Haramain Train to Jabal Omar. path 7  ")), /*#__PURE__*/React.createElement("img", {
+    return React.createElement("div", null, React.createElement("head", null, "  ", React.createElement("title", null, "Buses ")), React.createElement("body", null, React.createElement("h1", null, "Buses Services   "), React.createElement("p", null, " There are 4 paths that you can reach Alharam: "), React.createElement("ul", null, React.createElement("li", null, " From Um Al Qura to Ajyad Station. Path 6  "), React.createElement("li", null, " From Alhajj Street to AlMarwa Station. Path 10 "), React.createElement("li", null, " From Anwariya to Kaaba Station. Path2 "), React.createElement("li", null, " From Haramain Train to Jabal Omar. path 7  ")), React.createElement("img", {
       src: paths,
       width: "300",
       height: "300"
-    }), /*#__PURE__*/React.createElement("img", {
+    }), React.createElement("img", {
       src: map2,
       width: "300",
       height: "300"
-    }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", null, " you can : "), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }), React.createElement("div", null, React.createElement("p", null, " you can : "), React.createElement("ul", null, React.createElement("li", null, React.createElement(Link, {
       to: "/registration"
-    }, "registration")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, "registration")), React.createElement("li", null, React.createElement(Link, {
       to: "/bookbus"
-    }, "bookbus"))), /*#__PURE__*/React.createElement("p", null, "  Tickets  analysis in term of time  "), /*#__PURE__*/React.createElement("div", {
+    }, "bookbus"))), React.createElement("p", null, "  Tickets  analysis in term of time  "), React.createElement("div", {
       style: {
         display: "flex",
         justifyContent: "space-around",
         width: "100%"
       }
-    }, /*#__PURE__*/React.createElement("div", {
+    }, React.createElement("div", {
       style: {
         minWidth: "700px"
       },
       id: "mongochart1"
-    })), /*#__PURE__*/React.createElement("div", {
+    })), React.createElement("div", {
       style: {
         display: "flex",
         justifyContent: "space-around",
         width: "100%"
       }
-    }, /*#__PURE__*/React.createElement("div", {
+    }, React.createElement("div", {
       style: {
         minWidth: "700px"
       },
       id: "mongochart3"
-    })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Routes, null, /*#__PURE__*/React.createElement(Route, {
+    })), React.createElement("div", null, React.createElement(Routes, null, React.createElement(Route, {
       path: "/registration",
-      element: /*#__PURE__*/React.createElement(Registration, null)
-    }), /*#__PURE__*/React.createElement(Route, {
+      element: React.createElement(Registration, null)
+    }), React.createElement(Route, {
       path: "/bookbus",
-      element: /*#__PURE__*/React.createElement(Bookbus, null)
+      element: React.createElement(Bookbus, null)
     }))))));
   };
 
@@ -100928,46 +100888,46 @@ function (_super) {
   };
 
   Dashboard.prototype.render = function () {
-    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, " Management Dashboard"), /*#__PURE__*/React.createElement("p", null, "Buses   analysis "), /*#__PURE__*/React.createElement("p", null, "As showing in the charts,the morning is the less crowded then other times.  "), /*#__PURE__*/React.createElement("div", {
+    return React.createElement("div", null, React.createElement("h1", null, " Management Dashboard"), React.createElement("p", null, "Buses   analysis "), React.createElement("p", null, "As showing in the charts,the morning is the less crowded then other times.  "), React.createElement("div", {
       style: {
         display: "flex",
         justifyContent: "space-around",
         width: "100%"
       }
-    }, /*#__PURE__*/React.createElement("div", {
+    }, React.createElement("div", {
       style: {
         minWidth: "700px"
       },
       id: "mongochart1"
-    })), /*#__PURE__*/React.createElement("div", {
+    })), React.createElement("div", {
       style: {
         display: "flex",
         justifyContent: "space-around",
         width: "100%"
       }
-    }, /*#__PURE__*/React.createElement("div", {
+    }, React.createElement("div", {
       style: {
         minWidth: "700px"
       },
       id: "mongochart3"
-    })), /*#__PURE__*/React.createElement("p", null, "Cars  analysis "), /*#__PURE__*/React.createElement("p", null, "As showing in the charts,the end users usually book a trip without scuduling, so we suggest you to scudule your trip.   "), /*#__PURE__*/React.createElement("div", {
+    })), React.createElement("p", null, "Cars  analysis "), React.createElement("p", null, "As showing in the charts,the end users usually book a trip without scuduling, so we suggest you to scudule your trip.   "), React.createElement("div", {
       style: {
         display: "flex",
         justifyContent: "space-around",
         width: "100%"
       }
-    }, /*#__PURE__*/React.createElement("div", {
+    }, React.createElement("div", {
       style: {
         minWidth: "700px"
       },
       id: "mongochart2"
-    })), /*#__PURE__*/React.createElement("div", {
+    })), React.createElement("div", {
       style: {
         display: "flex",
         justifyContent: "space-around",
         width: "100%"
       }
-    }, /*#__PURE__*/React.createElement("div", {
+    }, React.createElement("div", {
       style: {
         minWidth: "700px"
       },
@@ -101015,34 +100975,34 @@ function (_super) {
   };
 
   Cars.prototype.render = function () {
-    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("head", null, "  ", /*#__PURE__*/React.createElement("title", null, "Cars ")), /*#__PURE__*/React.createElement("body", null, /*#__PURE__*/React.createElement("h1", null, "Cars Services   "), /*#__PURE__*/React.createElement("p", null, " There are 2 station that you can book a car from Alharam: "), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, " From Alsafwah.   Station1"), /*#__PURE__*/React.createElement("li", null, " From Jabal Omar. Station2  ")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", null, " you can : "), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    return React.createElement("div", null, React.createElement("head", null, "  ", React.createElement("title", null, "Cars ")), React.createElement("body", null, React.createElement("h1", null, "Cars Services   "), React.createElement("p", null, " There are 2 station that you can book a car from Alharam: "), React.createElement("ul", null, React.createElement("li", null, " From Alsafwah.   Station1"), React.createElement("li", null, " From Jabal Omar. Station2  ")), React.createElement("div", null, React.createElement("p", null, " you can : "), React.createElement("ul", null, React.createElement("li", null, React.createElement(Link, {
       to: "/registration"
-    }, "registration")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, "registration")), React.createElement("li", null, React.createElement(Link, {
       to: "/bookcar"
-    }, "book A trip for car"))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Routes, null, /*#__PURE__*/React.createElement(Route, {
+    }, "book A trip for car"))), React.createElement("div", null, React.createElement(Routes, null, React.createElement(Route, {
       path: "/registration",
-      element: /*#__PURE__*/React.createElement(Registration, null)
-    }), /*#__PURE__*/React.createElement(Route, {
+      element: React.createElement(Registration, null)
+    }), React.createElement(Route, {
       path: "/bookcar",
-      element: /*#__PURE__*/React.createElement(Bookcar, null)
-    })))), /*#__PURE__*/React.createElement("p", null, "cars  tickets  "), /*#__PURE__*/React.createElement("div", {
+      element: React.createElement(Bookcar, null)
+    })))), React.createElement("p", null, "cars  tickets  "), React.createElement("div", {
       style: {
         display: "flex",
         justifyContent: "space-around",
         width: "100%"
       }
-    }, /*#__PURE__*/React.createElement("div", {
+    }, React.createElement("div", {
       style: {
         minWidth: "700px"
       },
       id: "mongochart2"
-    })), /*#__PURE__*/React.createElement("div", {
+    })), React.createElement("div", {
       style: {
         display: "flex",
         justifyContent: "space-around",
         width: "100%"
       }
-    }, /*#__PURE__*/React.createElement("div", {
+    }, React.createElement("div", {
       style: {
         minWidth: "700px"
       },
@@ -101099,32 +101059,32 @@ function (_super) {
   };
 
   Registration.prototype.render = function () {
-    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("title", null, "registration "), /*#__PURE__*/React.createElement("form", {
+    return React.createElement("div", null, React.createElement("title", null, "registration "), React.createElement("form", {
       onSubmit: this.handleSubmitreg
-    }, /*#__PURE__*/React.createElement("h2", null, "registration form:"), /*#__PURE__*/React.createElement("label", null, "Username :", /*#__PURE__*/React.createElement("input", {
+    }, React.createElement("h2", null, "registration form:"), React.createElement("label", null, "Username :", React.createElement("input", {
       id: "uninput",
       type: "text",
       name: "inputun"
-    })), /*#__PURE__*/React.createElement("label", null, "Passworsd:", /*#__PURE__*/React.createElement("input", {
+    })), React.createElement("label", null, "Passworsd:", React.createElement("input", {
       id: "passinput",
       type: "text",
       name: "inputpass"
-    })), /*#__PURE__*/React.createElement("label", null, "Mobile number:", /*#__PURE__*/React.createElement("input", {
+    })), React.createElement("label", null, "Mobile number:", React.createElement("input", {
       id: "mobinput",
       type: "text",
       name: "inputmob"
-    })), /*#__PURE__*/React.createElement("label", null, "First Name:", /*#__PURE__*/React.createElement("input", {
+    })), React.createElement("label", null, "First Name:", React.createElement("input", {
       id: "Fninput",
       type: "text",
       name: "inputFn"
-    })), /*#__PURE__*/React.createElement("label", null, "Last Name:", /*#__PURE__*/React.createElement("input", {
+    })), React.createElement("label", null, "Last Name:", React.createElement("input", {
       id: "Lninput",
       type: "text",
       name: "inputLn"
-    })), /*#__PURE__*/React.createElement("input", {
+    })), React.createElement("input", {
       type: "submit",
       value: "Submit"
-    })), /*#__PURE__*/React.createElement("div", null, "   ", /*#__PURE__*/React.createElement("h2", {
+    })), React.createElement("div", null, "   ", React.createElement("h2", {
       id: "result"
     }, " ")));
   };
@@ -101143,10 +101103,10 @@ function (_super) {
     _this.displayBlogPost = function (posts) {
       if (!posts.length) return null;
       return posts.map(function (post, index) {
-        return /*#__PURE__*/React.createElement("div", {
+        return React.createElement("div", {
           key: index,
           className: "blog-post__display"
-        }, /*#__PURE__*/React.createElement("h3", null, post.path), /*#__PURE__*/React.createElement("p", null, post.createdOn), /*#__PURE__*/React.createElement("p", null, post.time));
+        }, React.createElement("h3", null, post.path), React.createElement("p", null, post.createdOn), React.createElement("p", null, post.time));
       });
     };
 
@@ -101212,31 +101172,31 @@ function (_super) {
   };
 
   LogIn.prototype.render = function () {
-    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("title", null, "Log In  "), /*#__PURE__*/React.createElement("form", {
+    return React.createElement("div", null, React.createElement("title", null, "Log In  "), React.createElement("form", {
       onSubmit: this.handleSubmitreg
-    }, /*#__PURE__*/React.createElement("h2", null, "LogIn form:"), /*#__PURE__*/React.createElement("label", null, "Username :", /*#__PURE__*/React.createElement("input", {
+    }, React.createElement("h2", null, "LogIn form:"), React.createElement("label", null, "Username :", React.createElement("input", {
       id: "uninput",
       type: "text",
       name: "inputun"
-    })), /*#__PURE__*/React.createElement("label", null, "Passworsd:", /*#__PURE__*/React.createElement("input", {
+    })), React.createElement("label", null, "Passworsd:", React.createElement("input", {
       id: "passinput",
       type: "text",
       name: "inputpass"
-    })), /*#__PURE__*/React.createElement("input", {
+    })), React.createElement("input", {
       type: "submit",
       value: "Submit"
-    })), /*#__PURE__*/React.createElement("div", null, "   ", /*#__PURE__*/React.createElement("h2", {
+    })), React.createElement("div", null, "   ", React.createElement("h2", {
       id: "result"
-    }, " ")), /*#__PURE__*/React.createElement("form", {
+    }, " ")), React.createElement("form", {
       onSubmit: this.handleSubmit
-    }, /*#__PURE__*/React.createElement("h2", null, "History :"), /*#__PURE__*/React.createElement("p", null, "   to see your history  :  "), /*#__PURE__*/React.createElement("label", null, "Username :", /*#__PURE__*/React.createElement("input", {
+    }, React.createElement("h2", null, "History :"), React.createElement("p", null, "   to see your history  :  "), React.createElement("label", null, "Username :", React.createElement("input", {
       id: "uninput2",
       type: "text",
       name: "inputun2"
-    })), /*#__PURE__*/React.createElement("input", {
+    })), React.createElement("input", {
       type: "submit",
       value: "Submit"
-    })), /*#__PURE__*/React.createElement("div", {
+    })), React.createElement("div", {
       className: "blog-"
     }, this.displayBlogPost(this.state.posts)));
   };
@@ -101325,36 +101285,36 @@ function (_super) {
   };
 
   Bookbus.prototype.render = function () {
-    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("title", null, "Book A ticket "), /*#__PURE__*/React.createElement("form", {
+    return React.createElement("div", null, React.createElement("title", null, "Book A ticket "), React.createElement("form", {
       onSubmit: this.handleSubmitbook
-    }, /*#__PURE__*/React.createElement("h2", null, "book a ticket  form:"), /*#__PURE__*/React.createElement("label", null, "Username :", /*#__PURE__*/React.createElement("input", {
+    }, React.createElement("h2", null, "book a ticket  form:"), React.createElement("label", null, "Username :", React.createElement("input", {
       id: "uninput",
       type: "text",
       name: "inputun"
-    })), /*#__PURE__*/React.createElement("label", null, "Select your path :", /*#__PURE__*/React.createElement("select", {
+    })), React.createElement("label", null, "Select your path :", React.createElement("select", {
       value: this.state.value,
       onChange: this.handleChangepath
-    }, /*#__PURE__*/React.createElement("option", {
+    }, React.createElement("option", {
       value: "path6 "
-    }, "From Um Al Qura to Ajyad Station. "), /*#__PURE__*/React.createElement("option", {
+    }, "From Um Al Qura to Ajyad Station. "), React.createElement("option", {
       value: "path10"
-    }, "From Alhajj Street to AlMarwa Station.  "), /*#__PURE__*/React.createElement("option", {
+    }, "From Alhajj Street to AlMarwa Station.  "), React.createElement("option", {
       value: "path2"
-    }, "From Anwariya to Kaaba Station."), /*#__PURE__*/React.createElement("option", {
+    }, "From Anwariya to Kaaba Station."), React.createElement("option", {
       value: "path7"
-    }, "From Haramain Train to Jabal Omar.  "))), /*#__PURE__*/React.createElement("label", null, "Select your time :", /*#__PURE__*/React.createElement("select", {
+    }, "From Haramain Train to Jabal Omar.  "))), React.createElement("label", null, "Select your time :", React.createElement("select", {
       value: this.state.time,
       onChange: this.handleChangetime
-    }, /*#__PURE__*/React.createElement("option", {
+    }, React.createElement("option", {
       value: "morning "
-    }, "From 8:00 am to 11:00 am. "), /*#__PURE__*/React.createElement("option", {
+    }, "From 8:00 am to 11:00 am. "), React.createElement("option", {
       value: "afternoon"
-    }, "From 12:00pm  to 4:00 pm .  "), /*#__PURE__*/React.createElement("option", {
+    }, "From 12:00pm  to 4:00 pm .  "), React.createElement("option", {
       value: "evening"
-    }, "From 4:00 pm to 8:00 pm ."))), /*#__PURE__*/React.createElement("input", {
+    }, "From 4:00 pm to 8:00 pm ."))), React.createElement("input", {
       type: "submit",
       value: "Submit"
-    })), /*#__PURE__*/React.createElement("div", null, "   ", /*#__PURE__*/React.createElement("h2", {
+    })), React.createElement("div", null, "   ", React.createElement("h2", {
       id: "result"
     }, " ")));
   };
@@ -101464,13 +101424,13 @@ function (_super) {
   };
 
   Metric.prototype.render = function () {
-    return /*#__PURE__*/React.createElement("div", {
+    return React.createElement("div", {
       style: {
         width: 500,
         height: 500
       },
       id: this.props.id
-    }, /*#__PURE__*/React.createElement("h1", null, " Distance Matrix:"), /*#__PURE__*/React.createElement("p", null, "  Distance Matrix by using google map API  "), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Origin: Um Al Qura station"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Destination:  Ajyad Station"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Distance between the Um Al Qura station to Ajyad Station is :", this.state.distance1), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Duration between the Um Al Qura station to Ajyad Station is :", this.state.duration1), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Origin: Alhajj Street station"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Destination: AlMarwa Station."), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Distance between the Alhajj Street station to AlMarwa Station is :", this.state.distance2), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Duration between the Alhajj Street station to AlMarwa Station is :", this.state.duration2));
+    }, React.createElement("h1", null, " Distance Matrix:"), React.createElement("p", null, "  Distance Matrix by using google map API  "), React.createElement("br", null), React.createElement("label", null, "Origin: Um Al Qura station"), React.createElement("br", null), React.createElement("label", null, "Destination:  Ajyad Station"), React.createElement("br", null), React.createElement("label", null, "Distance between the Um Al Qura station to Ajyad Station is :", this.state.distance1), React.createElement("br", null), React.createElement("label", null, "Duration between the Um Al Qura station to Ajyad Station is :", this.state.duration1), React.createElement("br", null), React.createElement("br", null), React.createElement("label", null, "Origin: Alhajj Street station"), React.createElement("br", null), React.createElement("label", null, "Destination: AlMarwa Station."), React.createElement("br", null), React.createElement("label", null, "Distance between the Alhajj Street station to AlMarwa Station is :", this.state.distance2), React.createElement("br", null), React.createElement("label", null, "Duration between the Alhajj Street station to AlMarwa Station is :", this.state.duration2));
   };
 
   return Metric;
@@ -101486,13 +101446,13 @@ function (_super) {
   }
 
   MapContainer.prototype.render = function () {
-    return /*#__PURE__*/React.createElement("div", {
+    return React.createElement("div", {
       style: {
         height: '50vh',
         width: '35%',
         justifyContent: 'flex-end'
       }
-    }, /*#__PURE__*/React.createElement("h1", null, " Stations location"), /*#__PURE__*/React.createElement("p", null, "here you can find the location of the buses stations, you can zoom to see more  "), /*#__PURE__*/React.createElement(google_map_react_1.default, {
+    }, React.createElement("h1", null, " Stations location"), React.createElement("p", null, "here you can find the location of the buses stations, you can zoom to see more  "), React.createElement(_googleMapReact.default, {
       bootstrapURLKeys: {
         key: 'AIzaSyC1QAymcINjIAuP8b-p1TIWd9xJwzh77oY'
       },
@@ -101501,19 +101461,19 @@ function (_super) {
       yesIWantToUseGoogleMapApiInternals: true,
       lat: 21.334094,
       lng: 39.945512
-    }, /*#__PURE__*/React.createElement(AnyReactComponent, {
+    }, React.createElement(AnyReactComponent, {
       lat: 21.334094,
       lng: 39.945512,
       text: "Um Al Qura Station Location"
-    }), /*#__PURE__*/React.createElement(AnyReactComponent, {
+    }), React.createElement(AnyReactComponent, {
       lat: 21.471654,
       lng: 39.843240,
       text: "Alhajj Street Station Location"
-    }), /*#__PURE__*/React.createElement(AnyReactComponent, {
+    }), React.createElement(AnyReactComponent, {
       lat: 21.428016,
       lng: 39.828845,
       text: "AlMarwa Station Station Location"
-    }), /*#__PURE__*/React.createElement(AnyReactComponent, {
+    }), React.createElement(AnyReactComponent, {
       lat: 21.416721,
       lng: 39.827589,
       text: "Ajyad Station Location"
@@ -101591,34 +101551,34 @@ function (_super) {
   };
 
   Bookcar.prototype.render = function () {
-    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("title", null, "Book A ticket "), /*#__PURE__*/React.createElement("form", {
+    return React.createElement("div", null, React.createElement("title", null, "Book A ticket "), React.createElement("form", {
       onSubmit: this.handleSubmitbook
-    }, /*#__PURE__*/React.createElement("h2", null, "book a ticket  form:"), /*#__PURE__*/React.createElement("label", null, "Username :", /*#__PURE__*/React.createElement("input", {
+    }, React.createElement("h2", null, "book a ticket  form:"), React.createElement("label", null, "Username :", React.createElement("input", {
       id: "uninput",
       type: "text",
       name: "inputun"
-    })), /*#__PURE__*/React.createElement("label", null, "Select your path :", /*#__PURE__*/React.createElement("select", {
+    })), React.createElement("label", null, "Select your path :", React.createElement("select", {
       value: this.state.value,
       onChange: this.handleChange
-    }, /*#__PURE__*/React.createElement("option", {
+    }, React.createElement("option", {
       value: "station1"
-    }, "From Alsafwah. "), /*#__PURE__*/React.createElement("option", {
+    }, "From Alsafwah. "), React.createElement("option", {
       value: "station2"
-    }, " From Jabal Omar. "))), /*#__PURE__*/React.createElement("label", null, "Select your time :", /*#__PURE__*/React.createElement("select", {
+    }, " From Jabal Omar. "))), React.createElement("label", null, "Select your time :", React.createElement("select", {
       value: this.state.time,
       onChange: this.handleChangetime
-    }, /*#__PURE__*/React.createElement("option", {
+    }, React.createElement("option", {
       value: "morning "
-    }, "From 8:00 am to 11:00 am. "), /*#__PURE__*/React.createElement("option", {
+    }, "From 8:00 am to 11:00 am. "), React.createElement("option", {
       value: "afternoon"
-    }, "From 12:00pm  to 4:00 pm .  "), /*#__PURE__*/React.createElement("option", {
+    }, "From 12:00pm  to 4:00 pm .  "), React.createElement("option", {
       value: "evening"
-    }, "From 4:00 pm to 8:00 pm ."), /*#__PURE__*/React.createElement("option", {
+    }, "From 4:00 pm to 8:00 pm ."), React.createElement("option", {
       value: "now"
-    }, "book now  ."))), /*#__PURE__*/React.createElement("input", {
+    }, "book now  ."))), React.createElement("input", {
       type: "submit",
       value: "Submit"
-    })), /*#__PURE__*/React.createElement("div", null, "   ", /*#__PURE__*/React.createElement("h2", {
+    })), React.createElement("div", null, "   ", React.createElement("h2", {
       id: "result"
     }, " ")));
   };
@@ -101637,10 +101597,10 @@ function (_super) {
     _this.displayBlogPost = function (posts) {
       if (!posts.length) return null;
       return posts.map(function (post, index) {
-        return /*#__PURE__*/React.createElement("div", {
+        return React.createElement("div", {
           key: index,
           className: "blog-post__display"
-        }, /*#__PURE__*/React.createElement("h3", null, post.path), /*#__PURE__*/React.createElement("p", null, post.createdOn), /*#__PURE__*/React.createElement("p", null, post.time));
+        }, React.createElement("h3", null, post.path), React.createElement("p", null, post.createdOn), React.createElement("p", null, post.time));
       });
     };
 
@@ -101680,16 +101640,16 @@ function (_super) {
   };
 
   Profile.prototype.render = function () {
-    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, " User Profile  "), /*#__PURE__*/React.createElement("form", {
+    return React.createElement("div", null, React.createElement("h1", null, " User Profile  "), React.createElement("form", {
       onSubmit: this.handleSubmit
-    }, /*#__PURE__*/React.createElement("h2", null, " Here you can viwe your Tickets history : "), /*#__PURE__*/React.createElement("p", null, " please enter your username  :"), /*#__PURE__*/React.createElement("label", null, "Username :", /*#__PURE__*/React.createElement("input", {
+    }, React.createElement("h2", null, " Here you can viwe your Tickets history : "), React.createElement("p", null, " please enter your username  :"), React.createElement("label", null, "Username :", React.createElement("input", {
       id: "uninput",
       type: "text",
       name: "inputun"
-    })), /*#__PURE__*/React.createElement("input", {
+    })), React.createElement("input", {
       type: "submit",
       value: "Submit"
-    })), /*#__PURE__*/React.createElement("div", {
+    })), React.createElement("div", {
       className: "blog-"
     }, this.displayBlogPost(this.state.posts)));
   };
@@ -101707,63 +101667,63 @@ function (_super) {
   }
 
   App.prototype.render = function () {
-    return /*#__PURE__*/React.createElement(HashRouter, null, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, " Transport System Management "), /*#__PURE__*/React.createElement("p", null, "Welcome to Transport System Management, we aim to help the end users to book a Tickets or see the Suggestion bar.  "), /*#__PURE__*/React.createElement("p", null, " This is part of project  which it under the COE 558: Cloud and Edge Computing course "), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    return React.createElement(HashRouter, null, React.createElement("div", null, React.createElement("h1", null, " Transport System Management "), React.createElement("p", null, "Welcome to Transport System Management, we aim to help the end users to book a Tickets or see the Suggestion bar.  "), React.createElement("p", null, " This is part of project  which it under the COE 558: Cloud and Edge Computing course "), React.createElement("ul", null, React.createElement("li", null, React.createElement(Link, {
       to: "/Buses"
-    }, "Buses ")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, "Buses ")), React.createElement("li", null, React.createElement(Link, {
       to: "/Cars"
-    }, "Cars")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, "Cars")), React.createElement("li", null, React.createElement(Link, {
       to: "/registration"
-    }, "registration")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, "registration")), React.createElement("li", null, React.createElement(Link, {
       to: "/bookbus"
-    }, "book A ticket for bus")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, "book A ticket for bus")), React.createElement("li", null, React.createElement(Link, {
       to: "/bookcar"
-    }, "book A trip for car")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, "book A trip for car")), React.createElement("li", null, React.createElement(Link, {
       to: "/Profile"
-    }, "user profile ")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, "user profile ")), React.createElement("li", null, React.createElement(Link, {
       to: "/Metric"
-    }, "Metric ")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, "Metric ")), React.createElement("li", null, React.createElement(Link, {
       to: "/Dashboard"
-    }, "Dashboard ")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, "Dashboard ")), React.createElement("li", null, React.createElement(Link, {
       to: "/LogIn"
-    }, " LogIn ")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    }, " LogIn ")), React.createElement("li", null, React.createElement(Link, {
       to: "/MapContainer"
-    }, " MapContainer "))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Routes, null, /*#__PURE__*/React.createElement(Route, {
+    }, " MapContainer "))), React.createElement("div", null, React.createElement(Routes, null, React.createElement(Route, {
       path: "/Buses",
-      element: /*#__PURE__*/React.createElement(Buses, null)
-    }), /*#__PURE__*/React.createElement(Route, {
+      element: React.createElement(Buses, null)
+    }), React.createElement(Route, {
       path: "/Cars",
-      element: /*#__PURE__*/React.createElement(Cars, null)
-    }), /*#__PURE__*/React.createElement(Route, {
+      element: React.createElement(Cars, null)
+    }), React.createElement(Route, {
       path: "/registration",
-      element: /*#__PURE__*/React.createElement(Registration, null)
-    }), /*#__PURE__*/React.createElement(Route, {
+      element: React.createElement(Registration, null)
+    }), React.createElement(Route, {
       path: "/bookbus",
-      element: /*#__PURE__*/React.createElement(Bookbus, null)
-    }), /*#__PURE__*/React.createElement(Route, {
+      element: React.createElement(Bookbus, null)
+    }), React.createElement(Route, {
       path: "/bookcar",
-      element: /*#__PURE__*/React.createElement(Bookcar, null)
-    }), /*#__PURE__*/React.createElement(Route, {
+      element: React.createElement(Bookcar, null)
+    }), React.createElement(Route, {
       path: "/Profile",
-      element: /*#__PURE__*/React.createElement(Profile, null)
-    }), /*#__PURE__*/React.createElement(Route, {
+      element: React.createElement(Profile, null)
+    }), React.createElement(Route, {
       path: "/Metric",
-      element: /*#__PURE__*/React.createElement(Metric, null)
-    }), /*#__PURE__*/React.createElement(Route, {
+      element: React.createElement(Metric, null)
+    }), React.createElement(Route, {
       path: "/Dashboard",
-      element: /*#__PURE__*/React.createElement(Dashboard, null)
-    }), /*#__PURE__*/React.createElement(Route, {
+      element: React.createElement(Dashboard, null)
+    }), React.createElement(Route, {
       path: "/LogIn",
-      element: /*#__PURE__*/React.createElement(LogIn, null)
-    }), /*#__PURE__*/React.createElement(Route, {
+      element: React.createElement(LogIn, null)
+    }), React.createElement(Route, {
       path: "/MapContainer",
-      element: /*#__PURE__*/React.createElement(MapContainer, null)
+      element: React.createElement(MapContainer, null)
     })))));
   };
 
   return App;
 }(React.Component);
 
-ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
 },{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/index.js","@mongodb-js/charts-embed-dom":"node_modules/@mongodb-js/charts-embed-dom/dist/charts-embed-dom.esm.js","google-map-react":"node_modules/google-map-react/dist/index.modern.js","./2paths.jpg":"2paths.jpg","./onemap.jpg":"onemap.jpg"}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -101792,7 +101752,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51967" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52280" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
